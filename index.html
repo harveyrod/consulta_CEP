@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta CEP</title>    
+    <link
+    rel="stylesheet"
+    href="node_modules/bootstrap/dist/css/bootstrap.min.css"/> <!--Como importar o Bootstrap para a página -->
+</head>
+<body>
+    <div class="container"> <!--a div container é utilizada para centralizar o conteúdo da página-->
+        <h1>Consulta de CEP</h1>
+    <form>
+        <div class="form-group">
+        <label for="cep">CEP</label>
+        <input type="text" class="form-control" maxlength="9" id="cep"/>
+        <small>00000-000</small>
+        </div>
+        <div class="form-group">
+        <label for="logradouro">Logradouro</label>
+        <input type="text" class="form-control" id="logradouro"/>
+        <small>Rua, Avenida, ...</small>
+        </div>
+        <div class="form-group">
+        <label for="bairro">Bairro</label>
+        <input type="text" class="form-control" id="bairro"/>
+        <small>Bairro</small>
+        </div>
+        <div class="form-group">
+        <label for="localidade">Localidade</label>
+        <input type="text" class="form-control" id="localidade"/>
+        <small>Cidade</small>
+        </div>
+        <div class="form-group">
+        <label for="uf">UF</label>
+        <input type="text" class="form-control" id="uf" />
+        <small>Estado</small>
+        <div class="button">
+            <button id="limpa" onclick="limpa">Nova consulta</button>
+        </div>
+        </div>
+    </form>   
+    </div>
+    <script src="src/js/main.js"></script>
+    <style>
+        h1 {
+            color: #fff;
+            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
+            align-self: center;
+            font-size: 28px;
+        }
+        body {
+            background-color: rgb(3, 3, 77);
+            background-image:inherit;
+        }
+        input {
+            inline-size: 5px;
+            width: auto;          
+        }
+        div {
+            display: grid;
+            color: white;
+            text-decoration: dotted;
+        }
+        small {
+            font-style: italic;
+            font-size: small;
+            margin-bottom: 0.8rem;
+            color: rgb(31, 161, 31);
+        }
+        footer{
+            color: rgb(173, 173, 27);
+            text-align: end;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: small;
+            font-style: oblique;
+        }
+        button {
+            background-color: rgb(75, 75, 6);
+            color: white;
+            display: flex;
+            justify-self: center;
+            font-size: 15px;
+            font-style: bold;
+            border-radius: 5px;
+            outline: auto;
+        } 
+        container {
+            justify-items: center;
+        }
+    </style>
+    
+<footer>
+    Created by Rodrigo with JS_HTML_CSS &#169 2021
+</footer>
+</body>
+</html>
