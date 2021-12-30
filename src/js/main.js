@@ -22,10 +22,10 @@ cep.addEventListener("blur", (e) => {
     .then(response => {response.json()
         .then(data => showData(data))
     })   // ação(function) a tomar em caso de sucesso - neste caso mostrar os dados(data) no console
-    .catch(e => console.log('Deu erro!', e + message))  // ação(function) a tomar em caso de insucesso
-    if (response = 400){
+    .catch(document.getElementById('cep').value = 'CEP inválido! Clique em "NOVA CONSULTA" e tente novamente') // ação(function) a tomar em caso de insucesso
+    /*if (response = 400){
         document.getElementById('cep').value = 'CEP inválido! Clique em "NOVA CONSULTA" e tente novamente'
-    }
+    }*/
     }) 
 
 function limpa(){
