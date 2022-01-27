@@ -11,89 +11,95 @@
 </head>
 <body>
     <div class="container"> <!--a div container é utilizada para centralizar o conteúdo da página-->
-        <h1>Consulta de CEP</h1>
     <form>
+        <h1>Consulta de CEP</h1>
+        <a href="https://www.google.com.br/maps/place/Brasil/@-14.4086569,-51.31668,4z/data=!3m1!4b1!4m5!3m4!1s0x9c59c7ebcc28cf:0x295a1506f2293e63!8m2!3d-14.235004!4d-51.92528?hl=pt-BR" target="__blank">
+        <h2>BRASIL</h2>
+        </a>
+
         <div class="form-group">
         <label for="cep">CEP</label>
-        <input type="text" class="form-control" maxlength="9" id="cep"/>
+        <input type="text" class="form-control" maxlength="9" id="cep" placeholder="00000-000"/>
         <small>00000-000</small>
         </div>
         <div class="form-group">
         <label for="logradouro">Logradouro</label>
-        <input type="text" class="form-control" id="logradouro"/>
+        <input type="text" class="form-control" id="logradouro" placeholder="Rua Brasil..."/>
         <small>Rua, Avenida, ...</small>
         </div>
         <div class="form-group">
         <label for="bairro">Bairro</label>
-        <input type="text" class="form-control" id="bairro"/>
+        <input type="text" class="form-control" id="bairro" placeholder="Centro"/>
         <small>Bairro</small>
         </div>
         <div class="form-group">
         <label for="localidade">Localidade</label>
-        <input type="text" class="form-control" id="localidade"/>
+        <input type="text" class="form-control" id="localidade" placeholder="Canoas"/>
         <small>Cidade</small>
         </div>
         <div class="form-group">
         <label for="uf">UF</label>
-        <input type="text" class="form-control" id="uf" />
-        <small>Estado</small>
+        <input type="text" class="form-control" id="uf" placeholder="RS"/>
+        <small>Estado</small>        
+        </div>
         <div class="button">
-            <button id="limpa" onclick="limpa">Nova consulta</button>
-        </div>
-        </div>
-    </form>   
-    </div>
+        <button id="limpa" onclick="limpa">Nova consulta</button>
+        </div> 
+    </form> 
+    </div>        
     <script src="src/js/main.js"></script>
     <style>
         h1 {
-            color: #fff;
-            padding-bottom: 0.5rem;
-            padding-top: 0.5rem;
-            align-self: center;
-            font-size: 28px;
+            color: white;        
+            font-size: 35px;
+            text-align: center;            
+            font-family: trebuchet;   
+            text-decoration-color: aqua;
         }
-        body {
-            background-color: rgb(3, 3, 77);
-            background-image:inherit;
+        h2 {
+            color: green;
+            text-align: center;
+            font-family: trebuchet;
+            text-decoration: underline;
         }
-        input {
-            inline-size: 5px;
-            width: auto;          
-        }
-        div {
-            display: grid;
-            color: white;
-            text-decoration: dotted;
-        }
+        body {            
+            background-image: url(/src/js/image/nuvens.jpg);
+            background-position: center;
+            background-size: cover;
+        }      
         small {
             font-style: italic;
             font-size: small;
             margin-bottom: 0.8rem;
-            color: rgb(31, 161, 31);
+            color: black;
         }
         footer{
             color: rgb(173, 173, 27);
             text-align: end;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
+            margin-right: 0.5rem;
+            margin-top: 1rem;
             font-size: small;
             font-style: oblique;
         }
         button {
-            background-color: rgb(75, 75, 6);
-            color: white;
-            display: flex;
-            justify-self: center;
+            background-color: rgb(156, 21, 21);
+            color: white;  
             font-size: 15px;
-            font-style: bold;
-            border-radius: 5px;
-            outline: auto;
-        } 
-        container {
-            justify-items: center;
+            font-style: bold;         
+            border-radius: 5px;   
+            display: grid;             
+            align-self: center;
+            margin:auto;
         }
-    </style>
-    
+        form {
+            max-width: 650px;           
+            display: grid;                    
+            margin: 40px auto;
+        }   
+        div {
+            color: white;
+        }        
+    </style>    
 <footer>
     Created by Rodrigo with JS_HTML_CSS &#169 2021
 </footer>
