@@ -5,7 +5,7 @@ const showData = (result) => {
         if (document.querySelector("#"+campo)){ // O uso da # fará com que o Selector traga somente os campos iguais
             document.querySelector("#"+campo).value = result[campo] // Faz com que os valores dos campos correspondemtes sejam preenchidos
         }  
-        }
+    }
 } // constante criada para tratar os dados obtidos pela FETCH - no caso um Object
 
 //Criando um evento // o BLUR permite ver o que foi digitado após o usuário tirar o foco do campo
@@ -22,11 +22,11 @@ cep.addEventListener("blur", (e) => {
     .then(response => {response.json()
         .then(data => showData(data))
     })   // ação(function) a tomar em caso de sucesso - neste caso mostrar os dados(data) no console
-    .catch(document.getElementById('cep').value = 'CEP inválido! Clique em "NOVA CONSULTA" e tente novamente') // ação(function) a tomar em caso de insucesso
+    .catch(document.getElementById('cep').value = 'CEP inválido! Clique em "NOVA CONSULTA" e tente novamente')// ação(function) a tomar em caso de insucesso
     /*if (response = 400){
         document.getElementById('cep').value = 'CEP inválido! Clique em "NOVA CONSULTA" e tente novamente'
     }*/
-    }) 
+}) 
 
 function limpa(){
     document.getElementById('cep').value = '';
